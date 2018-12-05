@@ -9,8 +9,11 @@ import { ArtistaComponent } from './components/artista/artista.component';
 import { SearchComponent } from './components/search/search.component';
 import { HomeComponent } from './components/home/home.component';
 
-
-import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { NotImgPipe } from './pipes/not-img.pipe';
+import { CardComponent } from './components/card/card.component';
+import { LoadingComponent } from './components/shared/loading/loading.component';
+import { DomseguroPipe } from './pipes/domseguro.pipe';
 
 
 @NgModule({
@@ -19,11 +22,16 @@ import { RouterModule } from '@angular/router';
     NavbarComponent,
     ArtistaComponent,
     SearchComponent,
-    HomeComponent
+    HomeComponent,
+    NotImgPipe,
+    DomseguroPipe,
+    CardComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

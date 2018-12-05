@@ -1,3 +1,10 @@
-<p>
-  home works!
-</p>
+<app-loading *ngIf="loading"></app-loading>
+
+<div class="alert alert-danger animated fadeIn" *ngIf="error">
+    <h3> Error </h3>
+    <p>
+        {{ msjError }}
+    </p>
+</div>
+
+<app-card [items]="newMusic"></app-card>
